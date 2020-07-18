@@ -2,10 +2,16 @@
     <div>
         <div class="contactInfo">
             <div class="fontStyle d-flex justify-content-center flex-column">
-                <div class="companyName grow">
-                    <b>FOLLOW | <span style="color: #DED3E6; font-weight: lighter">down</span></b>
+                <div class="companyName">
+                    <b>
+                        <FollowDown :light="true"/>
+                    </b>
                 </div>
-                <div class="solid-border align-self-center"></div>
+                <div>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
             </div>
             <div class="footerFont">
                 &copy; Copyright 2020 |
@@ -16,7 +22,11 @@
 </template>
 
 <script>
-    export default {};
+    import FollowDown from "./Shared/FollowDown";
+
+    export default {
+        components: {FollowDown}
+    };
 </script>
 
 <style scoped>
@@ -36,7 +46,7 @@
 
     .contactInfo {
         padding-top: 10px;
-        background-color: #A190B2;
+        background-image: linear-gradient(to right, #8871a7, #c4b3d0);
     }
 
     .fontStyle {
@@ -46,11 +56,28 @@
         font-family: "Montserrat", sans-serif;
     }
 
-    .solid-border {
-        border: 1px solid #A190B2;
-        width: 5%;
-        margin-top: 1%;
-        margin-bottom: 2%;
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
         text-align: center;
+        text-decoration: none;
+    }
+
+    .fa:hover {
+        opacity: 0.9;
+        color: #51356E;
+    }
+
+    .fa-facebook {
+        color: white;
+    }
+
+    .fa-twitter {
+        color: white;
+    }
+
+    .fa-instagram {
+        color: white;
     }
 </style>
