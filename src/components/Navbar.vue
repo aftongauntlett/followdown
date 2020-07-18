@@ -1,13 +1,14 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="dark" sticky>
-    <b-navbar-brand :to="{ name: 'Home' }">Home</b-navbar-brand>
+    <b-navbar-brand :to="{ name: 'Home' }"><span style="color:#51356E; font-size: 25px; font-family: 'Montserrat', sans-serif;
+      ;font-weight: bold">FOLLOW |</span> down</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav  class="ml-auto">
         <b-nav-item :to="{ name: 'About' }">About Us</b-nav-item>
-        <b-nav-item :to="{ name: 'Contact' }">Contact Us</b-nav-item>
+        <b-nav-item :to="{ name: 'Join' }">Join</b-nav-item>
         <b-nav-item :to="{ name: 'Login' }">Login</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -24,7 +25,19 @@ export default {};
 }
 
 .bg-dark {
-  background-color: rgb(41, 41, 41) !important;
+  background-color: #A190B2 !important;
   font-family: "Montserrat", sans-serif;
 }
+
+  .nav-link {
+    color: #51356E !important;
+  }
+
+  .nav-link:hover {
+    color: #DED3E6 !important;
+  }
+
+  .navbar-brand {
+    color: #DED3E6;
+  }
 </style>

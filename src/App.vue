@@ -1,7 +1,6 @@
 <template>
   <div class="d-flex flex-column" id="app">
     <Navbar />
-    {{ user }}
     <router-view class="flex-grow" />
     <Footer class="mt-auto"/>
   </div>
