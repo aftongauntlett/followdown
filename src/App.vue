@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex flex-column" id="app">
     <Navbar />
+    {{ user }}
     <router-view class="flex-grow" />
     <Footer class="mt-auto"/>
   </div>
@@ -9,10 +10,23 @@
 <script>
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import firebase from "firebase"
 export default {
   components: {
     Footer,
-    Navbar
+    Navbar,
+  },
+
+  data(){
+    return{
+      user: null
+    }
+  },
+
+  mounted(){
+    firebase.auth().onAuthStateChanged(user => {
+      this.user = user
+    })
   }
 };
 </script>
