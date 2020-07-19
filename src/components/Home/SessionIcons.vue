@@ -3,13 +3,17 @@
         <div class="d-flex my-auto flex-wrap flex-md-nowrap">
             <div
                     v-for="(info) in cardData"
-                    class="mx-4"
+                    class="mx-md-4 mx-auto my-2 my-md-0 btn session idle"
             >
-                <div class="container">
-                    <div class="idle btn session m-3">
+                    <div class="m-3">
                         {{info.text}}
                     </div>
                 </div>
+<!--                <div class="container">-->
+<!--                    <div class="idle btn session m-3">-->
+<!--                        {{info.text}}-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
 
@@ -61,10 +65,9 @@
 
     .btn {
         position: relative;
-        color: #51356e;
         width: 256px;
-        height: 64px;
-        line-height: 64px;
+        height: 100px;
+        line-height: 55px;
         transition: all 0.3s;
 
     span {
@@ -95,6 +98,7 @@
         z-index: 1;
         transition: all 0.3s;
         border: 1px solid rgba(81, 53, 110, 0.5);
+
     }
 
     .idle:hover::after {
@@ -108,7 +112,7 @@
     }
 
     .idle:hover::after, .idle:hover::before {
-        left: 96px;
+        left: 90px;
         width: 64px;
 
         animation-iteration-count: infinite;

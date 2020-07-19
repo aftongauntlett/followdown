@@ -8,11 +8,11 @@
 
         <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-                <b-nav-item class="grow" v-if="!user" :to="{ name: 'Login' }">Login</b-nav-item>
-                <b-nav-item v-else>{{user.displayName}}</b-nav-item>
-                <b-nav-item class="grow" :to="{ name: 'Join' }">Join</b-nav-item>
-                <b-nav-item class="grow" :to="{ name: 'About' }">About Us</b-nav-item>
-                <b-btn @click="logout" v-if="user">Logout</b-btn>
+                <b-nav-item class="grow" v-if="!user" :to="{ name: 'Login' }">Login or Join</b-nav-item>
+                <b-nav-item :to="{ name: 'Profile' }" class="grow" v-else>{{user.displayName}}</b-nav-item>
+                <b-nav-item class="grow" v-if="user" :to="{ name: 'Sessions' }">View Sessions</b-nav-item>
+                <b-nav-item class="grow" v-if="!user" :to="{ name: 'About' }">About Us</b-nav-item>
+                <b-nav-item class="grow" @click="logout" v-if="user">Logout</b-nav-item>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>

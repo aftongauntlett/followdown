@@ -19,8 +19,19 @@ Vue.use(VueRouter)
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    component: () => import('../views/About.vue')
+  },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: () => import('../views/Profile.vue')
+    },
+    {
+      path: '/sessions',
+      name: 'Sessions',
+      component: () => import('../views/Sessions.vue')
+    },
+
 ]
 
 const router = new VueRouter({

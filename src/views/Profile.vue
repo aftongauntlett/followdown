@@ -1,10 +1,17 @@
 <template>
-    
+    <div class="d-flex flex-wrap justify-content-around pt-5 py-5">
+        <ProfileCard/>
+        <SessionsCard/>
+    </div>
 </template>
 
 <script>
+    import ProfileCard from "../components/Profile/ProfileCard";
+    import SessionsCard from "../components/Profile/SessionsCard";
+
     export default {
-        name: "Profile"
+        name: "Profile",
+        components: {SessionsCard, ProfileCard}
     }
 </script>
 

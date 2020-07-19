@@ -3,6 +3,7 @@
   <div>
 
     <div class="about pt-5">
+      <AboutMain />
       <h1>Have feedback or suggestions?</h1>
       <ContactForm />
 
@@ -12,10 +13,12 @@
 
 <script>
   import ContactForm from "../components/About/ContactForm";
+  import AboutMain from "../components/About/AboutMain";
   export default {
     name: "About",
     components: {
-      ContactForm
+      ContactForm,
+      AboutMain
     }
   }
 </script>

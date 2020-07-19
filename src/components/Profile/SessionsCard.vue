@@ -1,10 +1,12 @@
 <template>
-    
+    <div>
+        Sessions Card
+    </div>
 </template>
 
 <script>
     export default {
-        name: "ProfileEdit"
+        name: "SessionsCard"
     }
 </script>
 

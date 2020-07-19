@@ -7,9 +7,7 @@
                         <FollowDown/>
                     </h1>
                     <p>Play Learn Read Watch</p>
-                    <div class="iconDiv w-100">
-                        <Icons/>
-                    </div>
+
                 </div>
                 <HomeButton class="ml-lg-auto mr-lg-5 mx-auto align-self-center"/>
             </div>
@@ -35,7 +33,7 @@
 <style scoped>
     h1 {
         text-align: left;
-        font-size: 45px;
+        font-size: 55px;
         color: #51356E;
         font-family: "Montserrat", sans-serif;
     }
@@ -53,12 +51,6 @@
         background-image: url("https://www.desktopbackground.org/download/o/2014/02/24/722271_pastel-gradient-backgrounds-tumblr-wallpaper_1920x1080_h.jpg");
         background-size: cover;
         background-position: center;
-
-    }
-
-    .iconDiv {
-        position: relative;
-        padding-top: 350px;
     }
 
 </style>
