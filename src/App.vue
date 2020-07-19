@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column" id="app">
     <Navbar />
-    <router-view class="flex-grow" />
+    <router-view class="flex-grow-1" />
     <Footer class="mt-auto"/>
   </div>
 </template>

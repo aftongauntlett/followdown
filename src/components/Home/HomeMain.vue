@@ -1,26 +1,34 @@
 <template>
-        <div class="homeCard w-100 p-lg-5 my-5">
+    <div class="d-flex flex-column h-100">
+        <div class="homeCard w-100 p-lg-5 mt-5">
             <div class="d-flex flex-wrap container">
                 <div class="mx-auto ml-lg-0">
-                    <h1><FollowDown /></h1>
+                    <h1>
+                        <FollowDown/>
+                    </h1>
                     <p>Play Learn Read Watch</p>
                     <div class="iconDiv w-100">
-                        <Icons />
+                        <Icons/>
                     </div>
                 </div>
                 <HomeButton class="ml-lg-auto mr-lg-5 mx-auto align-self-center"/>
             </div>
+
         </div>
+        <SessionIcons class="flex-grow-1"/>
+    </div>
+
 </template>
 
 <script>
     import HomeButton from "./HomeButton";
     import FollowDown from "../Shared/FollowDown";
     import Icons from "./Icons";
+    import SessionIcons from "./SessionIcons";
 
     export default {
         name: "HomeMain",
-        components: {Icons, FollowDown, HomeButton},
+        components: {SessionIcons, Icons, FollowDown, HomeButton},
     }
 </script>
 

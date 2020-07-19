@@ -1,8 +1,8 @@
 <template>
     <div class="d-flex flex-column">
-        <b-button class="offset py-3 px-5" variant="dark">Log In</b-button>
-        <b-button class="offset py-3 px-5" variant="dark">Join</b-button>
-        <b-button class="about offset py-3 px-5" variant="dark">About</b-button>
+        <b-button :to="{ name: 'Login' }" class="offset py-3 px-5" variant="dark">Log In</b-button>
+        <b-button :to="{ name: 'Join' }" class="offset py-3 px-5" variant="dark">Join</b-button>
+        <b-button :to="{ name: 'About' }" class="about offset py-3 px-5" variant="dark">About</b-button>
     </div>
 </template>
 
@@ -30,7 +30,6 @@
          border-color: var(--hover);
          color: #fff;
      }
-
     }
 
     .offset {

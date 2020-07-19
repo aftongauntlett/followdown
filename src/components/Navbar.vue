@@ -8,9 +8,9 @@
 
         <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-                <b-nav-item class="grow" :to="{ name: 'About' }">About Us</b-nav-item>
-                <b-nav-item class="grow" :to="{ name: 'Join' }">Join</b-nav-item>
                 <b-nav-item class="grow" :to="{ name: 'Login' }">Login</b-nav-item>
+                <b-nav-item class="grow" :to="{ name: 'Join' }">Join</b-nav-item>
+                <b-nav-item class="grow" :to="{ name: 'About' }">About Us</b-nav-item>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>

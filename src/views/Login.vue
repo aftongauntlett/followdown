@@ -1,6 +1,7 @@
 <template>
     <div>
-        <b-button @click="login">Login</b-button>
+
+        <b-button @click="loginWithFirebase">Login</b-button>
     </div>
 </template>
 
@@ -9,7 +10,7 @@
     export default {
         name: "Login",
         methods: {
-            login(){
+            loginWithFirebase(){
                 var provider = new firebase.auth.GoogleAuthProvider();
                 firebase.auth().signInWithPopup(provider)
             }
