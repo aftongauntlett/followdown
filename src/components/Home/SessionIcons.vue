@@ -5,10 +5,11 @@
                     v-for="(info) in cardData"
                     class="mx-4"
             >
-                <div class="m-3">
-                    {{info.text}}
+                <div class="container">
+                    <div class="idle btn session m-3">
+                        {{info.text}}
+                    </div>
                 </div>
-                <b-btn :to="{name: info.buttonLink}">{{info.buttonText}}</b-btn>
             </div>
         </div>
 
@@ -18,28 +19,28 @@
 <script>
     export default {
         name: "SessionIcons",
-        data(){
+        data() {
             return {
                 cardData: [
                     {
-                        text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-                        buttonText: 'Check it out',
-                        buttonLink: 'Home',
+                        text: 'Play Together',
+                        // buttonText: 'Check it out',
+                        // buttonLink: 'Home',
                     },
                     {
-                        text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-                        buttonText: 'Check it out',
-                        buttonLink: 'Home',
+                        text: 'Learn Together',
+                        // buttonText: 'Check it out',
+                        // buttonLink: 'Home',
                     },
                     {
-                        text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-                        buttonText: 'Check it out',
-                        buttonLink: 'Home',
+                        text: 'Watch Together',
+                        // buttonText: 'Check it out',
+                        // buttonLink: 'Home',
                     },
                     {
-                        text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-                        buttonText: 'Check it out',
-                        buttonLink: 'Home',
+                        text: 'Read Together',
+                        // buttonText: 'Check it out',
+                        // buttonLink: 'Home',
                     },
                 ]
             }
@@ -48,7 +49,88 @@
 </script>
 
 <style scoped>
-.w-10{
-  width: 10%;
-}
+    .w-10 {
+        width: 10%;
+    }
+
+    .session {
+        font-family: "Montserrat", sans-serif;
+        color: #51356E;
+        font-size: 20px;
+    }
+
+    .btn {
+        position: relative;
+        color: #51356e;
+        width: 256px;
+        height: 64px;
+        line-height: 64px;
+        transition: all 0.3s;
+
+    span {
+        transition: all 0.3s;
+        tranform: scale(1, 1);
+    }
+
+    }
+
+    .btn::before, .btn::after {
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .idle::before, .idle::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transition: all 0.3s;
+        border: 1px solid rgba(81, 53, 110, 0.5);
+    }
+
+    .idle:hover::after {
+        animation-name: rotatecw;
+        animation-duration: 2s;
+    }
+
+    .idle:hover::before {
+        animation-name: rotateccw;
+        animation-duration: 3s;
+    }
+
+    .idle:hover::after, .idle:hover::before {
+        left: 96px;
+        width: 64px;
+
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes rotatecw {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotateccw {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(-360deg);
+        }
+    }
+
 </style>

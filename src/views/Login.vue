@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <b-button @click="loginWithFirebase">Login</b-button>
+        <b-button @click="loginWithFirebase">Login with Google</b-button>
     </div>
 </template>
 
@@ -12,7 +12,9 @@
         methods: {
             loginWithFirebase(){
                 var provider = new firebase.auth.GoogleAuthProvider();
-                firebase.auth().signInWithPopup(provider)
+                firebase.auth().signInWithPopup(provider).then(user => {
+                    this.$router.push({name: 'Home'})
+                })
             }
         }
     }

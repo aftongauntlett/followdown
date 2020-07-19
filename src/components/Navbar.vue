@@ -8,9 +8,11 @@
 
         <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-                <b-nav-item class="grow" :to="{ name: 'Login' }">Login</b-nav-item>
+                <b-nav-item class="grow" v-if="!user" :to="{ name: 'Login' }">Login</b-nav-item>
+                <b-nav-item v-else>{{user.displayName}}</b-nav-item>
                 <b-nav-item class="grow" :to="{ name: 'Join' }">Join</b-nav-item>
                 <b-nav-item class="grow" :to="{ name: 'About' }">About Us</b-nav-item>
+                <b-btn @click="logout" v-if="user">Logout</b-btn>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
@@ -18,9 +20,27 @@
 
 <script>
     import FollowDown from "./Shared/FollowDown";
+    import firebase from 'firebase';
 
     export default {
-        components: {FollowDown}
+        components: {FollowDown},
+        data(){
+            return {
+                user: null
+            }
+        },
+        mounted(){
+            this.user = firebase.auth().currentUser;
+            firebase.auth().onAuthStateChanged(user => {
+                this.user = user;
+            })
+        },
+
+        methods: {
+            logout(){
+                firebase.auth().signOut();
+            }
+        }
     };
 </script>
 

@@ -2,7 +2,7 @@
     <div class="d-flex flex-column">
         <b-button :to="{ name: 'Login' }" class="offset py-3 px-5" variant="dark">Log In</b-button>
         <b-button :to="{ name: 'Join' }" class="offset py-3 px-5" variant="dark">Join</b-button>
-        <b-button :to="{ name: 'About' }" class="about offset py-3 px-5" variant="dark">About</b-button>
+        <b-button :to="{ name: 'About' }" class="offset py-3 px-5" variant="dark">About</b-button>
     </div>
 </template>
 
@@ -54,8 +54,5 @@
         }
     }
 
-    .about {
-        margin: unset;
-    }
 
 </style>
