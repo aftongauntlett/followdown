@@ -1,28 +1,41 @@
 <template>
     <div class="d-flex justify-content-center">
         <b-card
-                title="How does it work?"
+                title="What is this all about?"
                 img-src="https://i.pinimg.com/originals/83/01/12/830112e44ab0691d3a2de8e1bd98443b.png"
                 img-alt="Image"
                 img-bottom
                 tag="article"
-                style="max-width: 30rem;"
+                style="max-width: 40rem;"
                 class="cardFont mt-2"
         >
             <b-card-text>
                 <p class="pb-2">
-                    Play, Learn, Read, Watch and Socialize with others.Connect with people who share your
-                    interests and join their Sessions. Create your own Sessions based on what you enjoy and others can
-                    join yours. Every Session is set up with a time and date.
+                    Socialize with others from the comfort of your own home. Engage virtually with friends or make new
+                    friends.
+                    Here you can connect with people who share your interests and join their "Sessions" - or you can
+                    create your own and have people join yours.
+                    Every Session can be set up with a date and time.
+                </p>
+                <h4>But why?</h4>
+                <p>
+                    The purpose is to create an environment to engage + encourage reading, gaming, studying,
+                    watching TV or just enjoying some quality time with other people - all from your home. No need to
+                    feel isolated anymore. Scheduling activities helps encourage people to make time for one another.
                 </p>
                 <p>
-                    The goal is to create an environment to enjoy reading, gaming, learning,
-                    watching movies and TV with someone else. You can set schedules and times.
+                    Tired of watching scary movies by yourself? Fear no more. Want to study, but find motivation
+                    difficult
+                    - having a study buddy can help encourage you to keep at it.
+                </p>
+                <p>
+                    "Science has proven having a schedule helps productivity by 76%" <br> - Some scientist, probably.
                 </p>
 
-                <h4>What are Sessions?</h4>
-                <p>Sessions are events you schedule that other users can sign up to be a part of. If you are interested in creating a study session using Udemy or YouTube for
-                    example, you create that Session and others can sign up for that date and time. You can create private or public sessions.</p>
+                <h4>How does it work?</h4>
+                <p>You can create or join Sessions. Sessions are events (like watching movies, studying, gaming, reading). For example, you can choose a specific
+                game to play and create a Session, schedule it for a specific date and time. If others are interested in playing, they can sign up. On the day its
+                scheduled, everyone logs in on the agreed platform and you can begin playing. Same works for movies, studying, reading or just hanging out.</p>
 
             </b-card-text>
         </b-card>
@@ -48,5 +61,12 @@
 
     h4 {
         margin-bottom: .75rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .card {
+            padding-left: 20px;
+            padding-right: 20px;
+      }
     }
 </style>

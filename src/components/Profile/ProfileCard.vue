@@ -1,9 +1,9 @@
 <template>
     <div>
-        <UserInfo :user="user" />
-        <EditProfile @finished="edit = !edit" :profile="profile" v-if="edit" />
-        <ProfileData :profile="profile" v-else-if="profile" />
-        <b-button @click="edit = !edit" v-if="!edit" >Edit your profile</b-button>
+        <UserInfo class="userInfo pb-4" :user="user" />
+        <EditProfile class="userInfo" @finished="edit = !edit" :profile="profile" v-if="edit" />
+        <ProfileData class="userInfo" :profile="profile" v-else-if="profile" />
+        <b-button @click="edit = !edit" v-if="!edit" class="userInfo mb-4 mt-4" >Edit your profile</b-button>
     </div>
 </template>
 
@@ -12,10 +12,11 @@
     import UserInfo from "../Shared/UserInfo";
     import EditProfile from "./EditProfile";
     import ProfileData from "./ProfileData";
+    import RotateButtons from "../Shared/RotateButtons";
 
     export default {
         name: "ProfileCard",
-        components: {ProfileData, EditProfile, UserInfo},
+        components: {RotateButtons, ProfileData, EditProfile, UserInfo},
         data () {
             return {
                 user: {},
@@ -39,5 +40,7 @@
 </script>
 
 <style scoped>
-
+.userInfo {
+    font-family: "Montserrat", sans-serif;
+}
 </style>

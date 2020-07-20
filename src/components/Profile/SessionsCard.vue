@@ -1,14 +1,16 @@
 <template>
     <div>
         <h2>What Sessions are you interested in?</h2>
-        <b-btn
-                class="sessionButton"
-                v-for="session in sessions"
-                :key="session.text"
-                :style="`background-image:url(${session.img})`"
-                :pressed="userSessions.includes(session.text)"
-                @click="() => {toggleSession(session.text)}"
-        > {{ session.text }}</b-btn>
+        <div class="sessionCard">
+            <b-btn
+                    class="sessionButton m-5"
+                    v-for="session in sessions"
+                    :key="session.text"
+                    :style="`background-image:url(${session.img})`"
+                    :pressed="userSessions.includes(session.text)"
+                    @click="() => {toggleSession(session.text)}"
+            > {{ session.text }}</b-btn>
+        </div>
 
     </div>
 </template>
@@ -55,7 +57,15 @@
 </script>
 
 <style scoped>
-
 .sessionButton {
+    padding: 50px !important;
+    background-color: unset!important;
+    color: #51356E;
+    font-family: "Montserrat", sans-serif;
 }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+    }
+
 </style>
