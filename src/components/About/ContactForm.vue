@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h3>Have feedback or suggestions?</h3>
         <div class="d-flex justify-content-center mt-3 mb-3">
             <div style="max-width: 600px; min-width: 400px" class="formFill w-10">
                 <b-form @submit="onSubmit" v-if="show">
@@ -17,15 +18,6 @@
                         <b-form-input id="name-input" v-model="form.name" required placeholder="Enter name"></b-form-input>
                     </b-form-group>
 
-                    <b-form-group id="number-input-group" label="Your Number:" label-for="number-input">
-                        <b-form-input
-                                id="number-input"
-                                v-model="form.number"
-                                required
-                                placeholder="Enter number"
-                        ></b-form-input>
-                    </b-form-group>
-
                     <b-form-group label="Message:" label-for="message-textarea">
                         <b-form-textarea
                                 id="message-textarea"
@@ -35,7 +27,7 @@
                                 max-rows="6"
                         ></b-form-textarea>
                     </b-form-group>
-                    <b-button class="pButton" type="submit" variant="dark">Submit</b-button>
+                    <RotateButtons :dark="true" type="submit" text="Submit" />
                 </b-form>
 
                 <div>
@@ -50,13 +42,14 @@
 
 <script>
     import axios from "axios";
+    import RotateButtons from "../Shared/RotateButtons";
     export default {
         name: "ContactForm",
+        components: {RotateButtons},
         data() {
             return {
                 form: {
                     email: "",
-                    number: "",
                     name: "",
                     message: ""
                 },
@@ -68,13 +61,12 @@
                 evt.preventDefault();
                 axios
                     .get(
-                        `https://us-central1-gauntlett-design.cloudfunctions.net/sendMail?dest=afton.gauntlett@gmail.com&email=${this.form.email}&name=${this.form.name}&number=${this.form.number}&message=${this.form.message}`
+                        `https://us-central1-gauntlett-design.cloudfunctions.net/sendMail?dest=afton.gauntlett@gmail.com&email=${this.form.email}&name=${this.form.name}&message=${this.form.message}`
                     )
                     .then(() => {
                         this.$bvModal.show("modal-center");
                         this.form = {
                             email: "",
-                            number: "",
                             name: "",
                             message: ""
                         };
@@ -88,18 +80,7 @@
 </script>
 
 <style scoped>
-    .pButton:hover {
-        transition: all 0.2s ease-in-out;
-        transform: scale(1.1);
-    }
 
-    .pButton {
-        opacity: 0.8;
-        font-family: "Martel", serif;
-        font-size: 20px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
     .notify {
         font-family: "Martel", serif;
@@ -107,9 +88,7 @@
         text-align: center;
     }
 
-    .b-form {
-        font-family: "Montserrat", sans-serif !important;
-    }
+
 
     @media only screen and (min-width: 300px) {
         .formFill {

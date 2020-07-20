@@ -12,6 +12,7 @@
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-instagram"></a>
                 </div>
+                <b-button variant="outline" class="contactButton" :to="{ name: 'About' }">Contact & About</b-button>
             </div>
             <div class="footerFont">
                 &copy; Copyright 2020 |
@@ -23,9 +24,10 @@
 
 <script>
     import FollowDown from "./Shared/FollowDown";
+    import RotateButtons from "./Shared/RotateButtons";
 
     export default {
-        components: {FollowDown}
+        components: {RotateButtons, FollowDown}
     };
 </script>
 
@@ -46,7 +48,12 @@
 
     .contactInfo {
         padding-top: 10px;
-        background-image: linear-gradient(to right, #8871a7, #c4b3d0);
+        background-image: linear-gradient(to right, #988ca2, #ddafdd 80%);
+    }
+
+    .contactButton {
+        border: unset;
+        color: #51356E;
     }
 
     .fontStyle {

@@ -1,6 +1,4 @@
 <template>
-
-
     <div class="menu" :class="{active: showMenu}">
         <b-button class="btn trigger" @click="toggleMenu">
 <div class="explore">Explore</div>
@@ -28,7 +26,6 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>

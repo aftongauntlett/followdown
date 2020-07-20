@@ -1,6 +1,6 @@
 <template>
     <b-navbar toggleable="lg" type="dark" variant="dark" sticky>
-        <b-navbar-brand class="grow" :to="{ name: 'Home' }">
+        <b-navbar-brand class="brand grow" :to="{ name: 'Home' }">
             <FollowDown :light="true"/>
         </b-navbar-brand>
 
@@ -50,7 +50,8 @@
     }
 
     .bg-dark {
-        background-image: linear-gradient(to right, #a08fb2, #b9a4c5);
+        background-image: linear-gradient(to right, #988ca2, #ddafdd 80%);
+
         font-family: "Montserrat", sans-serif;
     }
 
@@ -59,7 +60,7 @@
     }
 
     .nav-link:hover {
-        color: #DED3E6 !important;
+        color: white !important;
     }
 
     .navbar-brand {
@@ -72,5 +73,9 @@
 
     .grow:hover {
         transform: scale(1.1);
+    }
+
+    .brand {
+        font-size: 25px;
     }
 </style>

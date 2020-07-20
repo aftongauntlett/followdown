@@ -1,10 +1,8 @@
 <template>
-
   <div>
-
+    <h1 class="about pt-5">Socialize - Virtually</h1>
     <div class="about pt-5">
       <AboutMain />
-      <h1>Have feedback or suggestions?</h1>
       <ContactForm />
 
     </div>
