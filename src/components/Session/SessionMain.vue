@@ -7,7 +7,8 @@
                 <b-card-text>
                     Create a Gaming Session.
                     <div>
-                        <b-button :to="{name: 'Create Session'}">Create Session</b-button>
+                        <b-button class="mt-3" variant="outline-dark" :to="{name: 'Create Session'}">Create Session
+                        </b-button>
                     </div>
                 </b-card-text>
             </b-card>
@@ -19,7 +20,8 @@
                 <b-card-text>
                     Sign up to join a Gaming Session.
                     <div>
-                        <b-button :to="{name: 'Sessions List', params: {sessionType: 'play'}}" v-if="playSessions">
+                        <b-button class="mt-3" variant="outline-dark"
+                                  :to="{name: 'Sessions List', params: {sessionType: 'play'}}" v-if="playSessions">
                             {{ Object.keys(playSessions).length }} sessions planned.
                         </b-button>
                     </div>
@@ -34,8 +36,7 @@
                 <b-card-text>
                     Let us host a private server for you and your friends.
                     <div class="d-flex justify-content-center flex-wrap pt-3">
-                        <RotateButtons :dark="true" :navTo="{ name: 'Server' }"
-                                       text="Host"></RotateButtons>
+                        <b-button variant="outline-dark" :navTo="{ name: 'Server' }">Host</b-button>
                     </div>
                 </b-card-text>
             </b-card>
@@ -48,8 +49,7 @@
                 <b-card-text>
                     Let us design a custom website for your Guild or Gaming Group.
                     <div class="d-flex justify-content-center flex-wrap pt-3">
-                        <RotateButtons :dark="true" :navTo="{ name: 'Website' }"
-                                       text="Website"></RotateButtons>
+                        <b-button variant="outline-dark" :navTo="{ name: 'Website' }">Website</b-button>
                     </div>
                 </b-card-text>
             </b-card>
@@ -80,6 +80,10 @@
 </script>
 
 <style scoped>
+
+    .btn {
+        border-radius: unset;
+    }
 
     .sessions {
         color: black;

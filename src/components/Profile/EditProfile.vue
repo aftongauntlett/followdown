@@ -6,7 +6,7 @@
                    rows="3"
                    max-rows="6"
            ></b-form-textarea>
-       <b-btn class="mt-3" type="submit">
+       <b-btn variant="outline-dark" class="mt-3" type="submit">
            Submit
        </b-btn>
    </b-form>
@@ -38,5 +38,7 @@
 </script>
 
 <style scoped>
-
+.btn {
+    border-radius: unset;
+}
 </style>
