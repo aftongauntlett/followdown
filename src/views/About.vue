@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="pt-5 aboutHeader d-flex flex-wrap">Offers</div>
+  <div class="card">
+    <div class="pt-5 aboutHeader d-flex flex-wrap justify-content-center">Offers</div>
     <div class="about pt-5">
       <AboutMain />
     </div>
