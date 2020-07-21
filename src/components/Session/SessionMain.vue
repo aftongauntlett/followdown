@@ -1,28 +1,39 @@
 <template>
     <div class="sessions flex-wrap w-100">
-        <b-card-group deck>
-            <b-card title="Play" class="grow m-lg-5 pt-lg-5" img-src="https://cdn.shopify.com/s/files/1/0219/0638/files/20191112_Integration_Razer_01.jpg?v=1573790671" img-alt="gaming setup" img-top>
+    <h2>What are you interested in?</h2>
+        <b-card-group deck class="cardDeck d-flex">
+            <b-card title="Create" class="grow m-lg-5 pt-lg-5" img-src="https://cdn.shopify.com/s/files/1/0219/0638/files/20191112_Integration_Razer_01.jpg?v=1573790671" img-alt="gaming setup" img-top>
                 <b-card-text>
-                    <b-button :to="{name: 'Sessions List', params: {sessionType: 'play'}}" v-if="playSessions">
-                        {{ Object.keys(playSessions).length }} sessions planned.
-                    </b-button>
-                    Create or Join a Gaming Session, set up a date and time to play Steam, X-Box, Playstation, board games, D&D and more.
-                    <b-button :to="{name: 'Create Session'}">Play</b-button>
+                    Create a Gaming Session.
+                    <div>
+                        <b-button :to="{name: 'Create Session'}">Play</b-button>
+                    </div>
                 </b-card-text>
             </b-card>
-            <b-card title="Learn" class="grow m-lg-5 pt-lg-5"  img-src="https://s15993.pcdn.co/wp-content/uploads/2019/06/fintech_technology_blockchain.jpg" img-alt="Image" img-top>
+            <b-card title="Join" class="grow m-lg-5 pt-lg-5"  img-src="https://www.gamespew.com/wp-content/uploads/2019/02/multiplayer.jpg" img-alt="Image" img-top>
                 <b-card-text>
-                    Create or Join a Study Session, set up a date and time to study with others using YouTube, Udemy and more.
+                    Sign up to join a Gaming Session.
+                    <div>
+                        <b-button :to="{name: 'Sessions List', params: {sessionType: 'play'}}" v-if="playSessions">
+                            {{ Object.keys(playSessions).length }} sessions planned.
+                        </b-button>
+                    </div>
                 </b-card-text>
             </b-card>
-            <b-card title="Read" class="grow m-lg-5 pt-lg-5"  img-src="https://www.wallpaperup.com/uploads/wallpapers/2015/02/02/608506/bd886f9a83d9d0feea05abd5dd0b194c-700.jpg" img-alt="Image" img-top>
+            <b-card title="Host a Server" class="grow m-lg-5 pt-lg-5"  img-src="https://techacute.com/wp-content/uploads/2014/12/led-server-lights-data-centre-blue-aisle_edited.jpg" img-alt="Image" img-top>
                 <b-card-text>
-                    Create or Join a Reading Session, set up a date and time to read or listen to audio books with others using books, Kindle, Audible and more.
+                    Let us host a private server for you and your friends.
+                    <div class="d-flex justify-content-center flex-wrap pt-3">
+                        <RotateButtons v-if="!user" :dark="true" :navTo="{ name: 'Server' }" text="Host"></RotateButtons>
+                    </div>
                 </b-card-text>
             </b-card>
-            <b-card title="Watch" class="grow m-lg-5 pt-lg-5" img-src="https://www.promisesbehavioralhealth.com/wp-content/uploads/2019/08/iStock_000044731126_Large.jpg" img-alt="Image" img-top>
+            <b-card title="Personalized Website" class="grow m-lg-5 pt-lg-5" img-src="https://toledolibrary.s3.amazonaws.com/uploads/images/blog/_large/Computer-Coding-Laptop.jpg" img-alt="Image" img-top>
                 <b-card-text>
-                    Create or Join a TV Binge Session, set up a date and time to watch movies or tv shows with others using YouTube, Netflix, Hulu and more.
+                    Let us design a custom website for your Guild or Gaming Group.
+                    <div class="d-flex justify-content-center flex-wrap pt-3">
+                        <RotateButtons v-if="!user" :dark="true" :navTo="{ name: 'Website' }" text="Website"></RotateButtons>
+                    </div>
                 </b-card-text>
             </b-card>
         </b-card-group>
@@ -31,8 +42,10 @@
 
 <script>
     import firebase from "firebase"
+    import RotateButtons from "../Shared/RotateButtons";
     export default {
         name: "SessionMain",
+        components: {RotateButtons},
         data() {
             return{
                 playSessions: null
@@ -49,7 +62,7 @@
 <style scoped>
 .sessions {
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -63,11 +76,14 @@
     border: unset;
 }
 
-.grow {
-    transition: all .2s ease-in-out;
+h2 {
+    font-family: "Montserrat", sans-serif;
+    padding-top: 30px;
 }
 
-.grow:hover {
-    transform: scale(1.1);
-}
+    .cardDeck {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 </style>

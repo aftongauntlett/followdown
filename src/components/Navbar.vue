@@ -52,15 +52,17 @@
     }
 
     .bg-dark {
-        background-image: linear-gradient(to right, #988ca2, #ddafdd 80%);
-
+        background-image: linear-gradient(to right, #878da3, #596b92 80%);
         font-family: "Montserrat", sans-serif;
+    }
+
+    .nav-link {
+        color: black !important;
     }
 
     .nav-link:hover {
         color: white !important;
     }
-
 
     .grow {
         transition: all .2s ease-in-out;
@@ -72,5 +74,6 @@
 
     .brand {
         font-size: 25px;
+        color: black;
     }
 </style>

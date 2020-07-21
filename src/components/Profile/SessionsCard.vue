@@ -1,31 +1,33 @@
 <template>
-    <div>
-        <h2>What are you interested in?</h2>
-        <div class="sessionCard">
-            <b-btn
-                    class="sessionButton m-5"
-                    v-for="session in sessions"
-                    :key="session.text"
-                    :style="`background-image:url(${session.img})`"
-                    :pressed="userSessions.includes(session.text)"
-                    @click="() => {toggleSession(session.text)}"
-            > {{ session.text }}</b-btn>
-        </div>
-
-    </div>
+<!--    <div>-->
+<!--        <h2>What are you interested in?</h2>-->
+<!--        <div class="sessionCard">-->
+<!--            <RotateButtons-->
+<!--                    class="sessionButton m-5"-->
+<!--                    v-for="session in sessions"-->
+<!--                    :key="session.text"-->
+<!--                    :text="session.text"-->
+<!--                    :style="`background-image:url(${session.img})`"-->
+<!--                    :pressed="userSessions.includes(session.text)"-->
+<!--                    @click="() => {toggleSession(session.text)}"-->
+<!--            > {{ session.text }}</RotateButtons>-->
+<!--        </div>-->
+<!--    </div>-->
 </template>
 
 <script>
     import firebase from "firebase"
+    import RotateButtons from "../Shared/RotateButtons";
     export default {
         name: "SessionsCard",
+        components: {RotateButtons},
         data () {
             return {
                 sessions: [
-                    {text: "Server Hosting", img: ""},
-                    {text: "Custom Website"},
-                    {text: "D&D Finder"},
-                    {text: "Game Finder"}
+                    {text: "Create a Session", img: ""},
+                    {text: "Join a Session"},
+                    {text: "Host a Server"},
+                    {text: "Customized Website"}
                 ],
                 userSessions: []
             }
@@ -58,7 +60,6 @@
 
 <style scoped>
 .sessionButton {
-    padding: 50px !important;
     background-color: unset!important;
     color: #51356E;
     font-family: "Montserrat", sans-serif;
@@ -66,6 +67,8 @@
 
     h2 {
         font-family: "Montserrat", sans-serif;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
 </style>

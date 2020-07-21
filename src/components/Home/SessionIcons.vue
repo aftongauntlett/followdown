@@ -21,16 +21,16 @@
             return {
                 cardData: [
                     {
-                        text: 'Server Hosting',
+                        text: 'Create a Session',
                     },
                     {
-                        text: 'Custom Website',
+                        text: 'Join a Session',
                     },
                     {
-                        text: 'D&D Finder',
+                        text: 'Host a Server',
                     },
                     {
-                        text: 'Game Finder',
+                        text: 'Personalized Website',
                     },
                 ]
             }

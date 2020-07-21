@@ -13,7 +13,7 @@
 
 <style scoped>
     .light {
-        color: #DED3E6;
+        color: white;
     }
 
     .subtitle {

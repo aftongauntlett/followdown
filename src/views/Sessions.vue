@@ -1,7 +1,7 @@
 <template>
-    <div class="sessionMain mb-1">
-        <div >Sessions</div>
-        <div class="sessionSecondary">Be social again - in the virtual world.</div>
+    <div class="sessionMain">
+        <div >Offers</div>
+        <div class="sessionSecondary">Choose an option below to get started</div>
         <SessionMain />
     </div>
 
@@ -18,10 +18,8 @@
 <style scoped>
 .sessionMain {
     font-family: 'Lexend Zetta', sans-serif;
-    margin-top: 20px;
     padding: 60px;
     font-size: 50px;
-    background-color: rgba(222, 211, 230, 0.25);
 }
 
     .sessionSecondary {

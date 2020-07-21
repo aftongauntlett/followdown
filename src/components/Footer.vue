@@ -16,7 +16,7 @@
             </div>
             <div class="footerFont">
                 &copy; Copyright 2020 |
-                <span style="color: #c6cce3">FollowDown</span> | All Rights Reserved
+                <span style="color: white">FollowDown</span> | All Rights Reserved
             </div>
         </div>
     </div>
@@ -48,12 +48,12 @@
 
     .contactInfo {
         padding-top: 10px;
-        background-color: #878aa0 !important;
+        background-image: linear-gradient(to right, #878da3 , #596b92 80%);
     }
 
     .contactButton {
         border: unset;
-        color: #c6cce3;
+        color: white;
     }
 
     .contactButton:hover {
@@ -62,7 +62,7 @@
 
     .fontStyle {
         text-align: center;
-        color: #c6cce3;
+        color: white;
         margin-top: 30px;
         font-family: "Montserrat", sans-serif;
     }

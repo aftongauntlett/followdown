@@ -46,8 +46,8 @@
 
     .homeCard {
         background-color: rgba(214, 198, 225, 0.25);
-        background-image: url("https://wallpaperplay.com/walls/full/5/9/0/92378.jpg");
-        background-size: auto;
+        background-image: url("https://wallpaperplay.com/walls/full/d/7/e/191282.jpg");
+        background-size: cover;
         background-position: center;
         min-height: 35vh;
     }

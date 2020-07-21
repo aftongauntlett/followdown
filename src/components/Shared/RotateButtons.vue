@@ -20,12 +20,12 @@
 
 <style lang="scss" scoped>
     .dark {
-        color: #51356E;
+        color: black;
     }
 
     .mainButtons {
         font-family: "Montserrat", sans-serif;
-        color: #51356E;
+        color: black;
         font-size: 20px;
     }
 
@@ -68,7 +68,7 @@
         left: 0;
         z-index: 1;
         transition: all 0.3s;
-        border: 1px solid rgba(81, 53, 110, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
     }
 
     .idle:hover::after {

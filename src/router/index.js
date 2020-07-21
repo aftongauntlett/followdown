@@ -43,6 +43,16 @@ Vue.use(VueRouter)
       name: 'Sessions List',
       component: () => import('../views/SessionsList.vue')
     },
+    {
+      path: '/server',
+      name: 'Server',
+      component: () => import('../views/Server.vue')
+    },
+    {
+      path: '/website',
+      name: 'Website',
+      component: () => import('../views/Website.vue')
+    },
 
 ]
 

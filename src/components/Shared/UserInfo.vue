@@ -24,8 +24,9 @@
 .userInfo {
     font-size: 30px;
 }
+
     .imageInfo {
         border-radius: 300px;
-        width: 60%
+        width: 30%;
     }
 </style>
