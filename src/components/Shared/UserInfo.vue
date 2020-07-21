@@ -27,6 +27,7 @@
 
     .imageInfo {
         border-radius: 300px;
-        width: 30%;
+        width: 80%;
+        margin-top: 20px;
     }
 </style>
