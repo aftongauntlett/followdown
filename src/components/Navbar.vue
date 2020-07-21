@@ -39,6 +39,7 @@
         methods: {
             logout(){
                 firebase.auth().signOut();
+                this.$router.push("/")
             }
         }
     };
