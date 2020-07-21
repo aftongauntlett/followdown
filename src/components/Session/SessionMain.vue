@@ -4,6 +4,7 @@
             <b-card title="Play" class="grow m-lg-5 pt-lg-5" img-src="https://cdn.shopify.com/s/files/1/0219/0638/files/20191112_Integration_Razer_01.jpg?v=1573790671" img-alt="gaming setup" img-top>
                 <b-card-text>
                     Create or Join a Gaming Session, set up a date and time to play Steam, X-Box, Playstation, board games, D&D and more.
+                    <b-button :to="{name: 'Create Session'}">Play</b-button>
                 </b-card-text>
             </b-card>
             <b-card title="Learn" class="grow m-lg-5 pt-lg-5"  img-src="https://s15993.pcdn.co/wp-content/uploads/2019/06/fintech_technology_blockchain.jpg" img-alt="Image" img-top>

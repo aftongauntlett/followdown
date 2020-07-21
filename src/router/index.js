@@ -32,6 +32,12 @@ Vue.use(VueRouter)
       component: () => import('../views/Sessions.vue')
     },
 
+    {
+      path: '/sessions/new',
+      name: 'Create Session',
+      component: () => import('../views/CreateSession.vue')
+    },
+
 ]
 
 const router = new VueRouter({
