@@ -1,6 +1,6 @@
 <template>
     <div class="sessionMain">
-        <div >Offers</div>
+        <div >Sessions</div>
         <div class="sessionSecondary">Choose an option below to get started</div>
         <SessionMain />
     </div>

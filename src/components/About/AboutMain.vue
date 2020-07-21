@@ -11,13 +11,18 @@
                     If you are looking to play a game but would like your own server, we can host it for you. If you
                     want special mods and customization, just let us know.
                 </p>
-                <div class="pricing">$10 monthly</div>
-
-
+                <div class="d-flex justify-content-center">
+                    <RotateButtons v-if="!user || user" :dark="true" :navTo="{ name: 'Hosting' }"
+                                   text="Host"></RotateButtons>
+                </div>
                 <div class="header pt-5">Custom Website</div>
-                <p>Looking for a website for your D&D group or Guild? We build custom made websites tailored to your design specs. Don't have a design in mind? Just tell us your favorite colors and
+                <p>Looking for a website for your D&D group or Guild? We build custom made websites tailored to your
+                    design specs. Don't have a design in mind? Just tell us your favorite colors and
                     we will create something for you. We will design, build and host your website.</p>
-                <div class="pricing">$5 monthly</div>
+                <div class="d-flex justify-content-center">
+                    <RotateButtons v-if="!user || user" :dark="true" :navTo="{ name: 'Website' }"
+                                   text="Build"></RotateButtons>
+                </div>
             </b-card-text>
         </b-card>
 
@@ -26,8 +31,11 @@
 </template>
 
 <script>
+    import RotateButtons from "../Shared/RotateButtons";
+
     export default {
-        name: "AboutMain"
+        name: "AboutMain",
+        components: {RotateButtons}
     }
 </script>
 
@@ -59,9 +67,4 @@
         color: rgba(15, 15, 15, 0.77);
     }
 
-    .pricing {
-        font-size: 25px;
-
-
-    }
 </style>

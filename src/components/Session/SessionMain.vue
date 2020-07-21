@@ -1,12 +1,11 @@
 <template>
     <div class="sessions flex-wrap w-100">
-    <h2>What are you interested in?</h2>
         <b-card-group deck class="cardDeck d-flex">
             <b-card title="Create" class="grow m-lg-5 pt-lg-5" img-src="https://cdn.shopify.com/s/files/1/0219/0638/files/20191112_Integration_Razer_01.jpg?v=1573790671" img-alt="gaming setup" img-top>
                 <b-card-text>
                     Create a Gaming Session.
                     <div>
-                        <b-button :to="{name: 'Create Session'}">Play</b-button>
+                        <b-button :to="{name: 'Create Session'}">Create Session</b-button>
                     </div>
                 </b-card-text>
             </b-card>
