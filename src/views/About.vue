@@ -1,21 +1,17 @@
 <template>
   <div>
-    <h1 class="about pt-5">Socialize - Virtually</h1>
+    <div class="pt-5 aboutHeader d-flex flex-wrap">Offers</div>
     <div class="about pt-5">
       <AboutMain />
-      <ContactForm />
-
     </div>
   </div>
 </template>
 
 <script>
-  import ContactForm from "../components/About/ContactForm";
   import AboutMain from "../components/About/AboutMain";
   export default {
     name: "About",
     components: {
-      ContactForm,
       AboutMain
     }
   }
@@ -26,5 +22,13 @@
     font-family: "Montserrat", sans-serif;
   }
 
+  .aboutHeader {
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    color: #51356E;
+    border-bottom: 1px solid #DED3E6;
+    margin: 0 auto;
+    width: auto;
+  }
 
 </style>

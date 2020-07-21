@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>What Sessions are you interested in?</h2>
+        <h2>What are you interested in?</h2>
         <div class="sessionCard">
             <b-btn
                     class="sessionButton m-5"
@@ -22,10 +22,10 @@
         data () {
             return {
                 sessions: [
-                    {text: "Play", img: ""},
-                    {text: "Learn"},
-                    {text: "Read"},
-                    {text: "Watch"}
+                    {text: "Server Hosting", img: ""},
+                    {text: "Custom Website"},
+                    {text: "D&D Finder"},
+                    {text: "Game Finder"}
                 ],
                 userSessions: []
             }

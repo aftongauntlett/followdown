@@ -48,11 +48,15 @@
 
     .contactInfo {
         padding-top: 10px;
-        background-image: linear-gradient(to right, #988ca2, #ddafdd 80%);
+        background-image: linear-gradient(to right, #7b6f82, #ddafdd 90%);
     }
 
     .contactButton {
         border: unset;
+        color: #DED3E6;
+    }
+
+    .contactButton:hover {
         color: #51356E;
     }
 

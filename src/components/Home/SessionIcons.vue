@@ -5,7 +5,7 @@
                     v-for="(info) in cardData"
                    :text="info.text"
                     :dark="true"
-                    class="m-3"
+                    class="m-md-3 mx-auto my-3"
             >
             </RotateButtons>
         </div>
@@ -21,16 +21,16 @@
             return {
                 cardData: [
                     {
-                        text: 'Play Together',
+                        text: 'Server Hosting',
                     },
                     {
-                        text: 'Learn Together',
+                        text: 'Custom Website',
                     },
                     {
-                        text: 'Watch Together',
+                        text: 'D&D Finder',
                     },
                     {
-                        text: 'Read Together',
+                        text: 'Game Finder',
                     },
                 ]
             }

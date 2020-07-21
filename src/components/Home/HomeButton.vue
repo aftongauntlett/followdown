@@ -1,7 +1,8 @@
 <template>
     <div class="d-flex flex-column">
         <RotateButtons v-if="!user" :dark="true" :navTo="{ name: 'Login' }" text="Log In or Join" class="mb-5"></RotateButtons>
-        <RotateButtons  v-if="!user" :dark="true" :navTo="{ name: 'About' }" text="About Us" class=""></RotateButtons>
+        <RotateButtons  v-if="!user" :dark="true" :navTo="{ name: 'About' }" text="About Us"></RotateButtons>
+        <RotateButtons  v-if="user" :dark="true" :navTo="{ name: 'Profile' }" text="Profile"></RotateButtons>
     </div>
 </template>
 

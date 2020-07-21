@@ -55,17 +55,10 @@
         font-family: "Montserrat", sans-serif;
     }
 
-    .nav-link {
-        color: #51356E !important;
-    }
-
     .nav-link:hover {
         color: white !important;
     }
 
-    .navbar-brand {
-        color: #51356E;
-    }
 
     .grow {
         transition: all .2s ease-in-out;

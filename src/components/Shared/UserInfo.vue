@@ -1,7 +1,7 @@
 <template>
     <div>
-        <img :src="user.photoURL" alt="users profile picture">
-        <div>
+        <img :src="user.photoURL" alt="users profile picture" class="imageInfo">
+        <div  class="userInfo mt-3">
             {{ user.displayName }}
         </div>
 
@@ -21,4 +21,11 @@
 
 <style scoped>
 
+.userInfo {
+    font-size: 30px;
+}
+    .imageInfo {
+        border-radius: 300px;
+        width: 60%
+    }
 </style>

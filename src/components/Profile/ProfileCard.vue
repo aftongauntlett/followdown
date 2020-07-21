@@ -3,7 +3,9 @@
         <UserInfo class="userInfo pb-4" :user="user" />
         <EditProfile class="userInfo" @finished="edit = !edit" :profile="profile" v-if="edit" />
         <ProfileData class="userInfo" :profile="profile" v-else-if="profile" />
-        <b-button @click="edit = !edit" v-if="!edit" class="userInfo mb-4 mt-4" >Edit your profile</b-button>
+<!--        <b-button @click="edit = !edit" v-if="!edit" class="userInfo mb-4 mt-4">Edit your profile</b-button>-->
+        <RotateButtons :on-click="toggleEdit" v-if="!edit" class="userInfo mb-4 mt-4" :dark="true" text="Edit Profile"></RotateButtons>
+
     </div>
 </template>
 
@@ -35,6 +37,11 @@
                       console.log(snapshot.val())
                   })
             })
+        },
+        methods: {
+            toggleEdit(){
+                this.edit = !this.edit
+            }
         }
     }
 </script>

@@ -32,7 +32,7 @@
     h1 {
         text-align: left;
         font-size: 65px;
-        color: #51356E;
+        color: #51356e;
         font-family: 'Lexend Zetta', sans-serif;
     }
 
@@ -47,8 +47,9 @@
     .homeCard {
         background-color: rgba(214, 198, 225, 0.25);
         background-image: url("https://wallpaperplay.com/walls/full/5/9/0/92378.jpg");
-        background-size: cover;
+        background-size: auto;
         background-position: center;
+        min-height: 35vh;
     }
 
     @media only screen and (max-width: 600px) {
