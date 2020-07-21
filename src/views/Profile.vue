@@ -1,12 +1,7 @@
 <template>
-    <div class="flex-container pt-5">
-        <div class="flex-child">
+    <div class="container d-flex pt-5">
             <ProfileCard/>
-            <!--        <SessionsCard/>-->
-        </div>
-        <div class="flex-child">
             <SessionMain />
-        </div>
     </div>
 </template>
 
@@ -22,15 +17,5 @@
 </script>
 
 <style scoped>
-    .flex-container {
-        display: flex;
-    }
 
-    .flex-child {
-        flex: 1;
-    }
-
-    .flex-child:first-child {
-        margin-right: 20px;
-    }
 </style>

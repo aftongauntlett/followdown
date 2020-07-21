@@ -1,5 +1,5 @@
 <template>
-    <div class="sessionMain">
+    <div class="container sessionMain">
         <div >Sessions</div>
         <div class="sessionSecondary">Choose an option below to get started</div>
         <SessionMain />
