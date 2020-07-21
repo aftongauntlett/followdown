@@ -6,16 +6,16 @@
                    rows="3"
                    max-rows="6"
            ></b-form-textarea>
-       <RotateButtons class="mainButtons mt-4" type="submit" :dark="true" text="Submit" ></RotateButtons>
+       <b-btn class="mt-3" type="submit">
+           Submit
+       </b-btn>
    </b-form>
 </template>
 
 <script>
     import firebase from "firebase"
-    import RotateButtons from "../Shared/RotateButtons";
     export default {
         name: "EditProfile",
-        components: {RotateButtons},
         methods: {
             onSubmit(){
                 firebase.database().ref(`users/${firebase.auth().currentUser.uid}`).update({
@@ -31,6 +31,7 @@
         data(){
             return {
                 aboutMe: ""
+
             }
         }
     }

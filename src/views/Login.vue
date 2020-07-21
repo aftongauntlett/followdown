@@ -4,9 +4,6 @@
         <div class="d-flex justify-content-center">
             <b-card
                     title="Welcome"
-                    img-src="https://i.pinimg.com/originals/83/01/12/830112e44ab0691d3a2de8e1bd98443b.png"
-                    img-alt="Image"
-                    img-top
                     tag="article"
                     style="max-width: 20rem; max-height: 25rem"
                     class="cardFont mb-2 mt-2"
@@ -55,6 +52,7 @@
         border-bottom: 1px solid #DED3E6;
         margin: 0 auto;
         width: auto;
+        margin-bottom: 30px;
     }
 
 </style>

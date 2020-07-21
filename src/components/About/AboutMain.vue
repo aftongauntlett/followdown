@@ -12,7 +12,7 @@
                     want special mods and customization, just let us know.
                 </p>
                 <div class="d-flex justify-content-center">
-                    <RotateButtons v-if="!user || user" :dark="true" :navTo="{ name: 'Hosting' }"
+                    <RotateButtons :dark="true" :navTo="{ name: 'Hosting' }"
                                    text="Host"></RotateButtons>
                 </div>
                 <div class="header pt-5">Custom Website</div>
@@ -20,7 +20,7 @@
                     design specs. Don't have a design in mind? Just tell us your favorite colors and
                     we will create something for you. We will design, build and host your website.</p>
                 <div class="d-flex justify-content-center">
-                    <RotateButtons v-if="!user || user" :dark="true" :navTo="{ name: 'Website' }"
+                    <RotateButtons :dark="true" :navTo="{ name: 'Website' }"
                                    text="Build"></RotateButtons>
                 </div>
             </b-card-text>

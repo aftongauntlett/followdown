@@ -34,7 +34,7 @@
                 <b-card-text>
                     Let us host a private server for you and your friends.
                     <div class="d-flex justify-content-center flex-wrap pt-3">
-                        <RotateButtons v-if="!user" :dark="true" :navTo="{ name: 'Server' }"
+                        <RotateButtons :dark="true" :navTo="{ name: 'Server' }"
                                        text="Host"></RotateButtons>
                     </div>
                 </b-card-text>
@@ -48,7 +48,7 @@
                 <b-card-text>
                     Let us design a custom website for your Guild or Gaming Group.
                     <div class="d-flex justify-content-center flex-wrap pt-3">
-                        <RotateButtons v-if="!user" :dark="true" :navTo="{ name: 'Website' }"
+                        <RotateButtons :dark="true" :navTo="{ name: 'Website' }"
                                        text="Website"></RotateButtons>
                     </div>
                 </b-card-text>
@@ -68,6 +68,7 @@
         data() {
             return {
                 playSessions: null
+
             }
         },
         mounted() {
