@@ -16,7 +16,7 @@
             </div>
             <div class="footerFont">
                 &copy; Copyright 2020 |
-                <span style="color: #DED3E6">FollowDown</span> | All Rights Reserved
+                <span style="color: #c6cce3">FollowDown</span> | All Rights Reserved
             </div>
         </div>
     </div>
@@ -35,34 +35,34 @@
     .footerFont {
         padding-top: 15px;
         padding-bottom: 10px;
-        color: #51356E;
+        color: #000000;
         font-family: "Montserrat", sans-serif;
     }
 
     .companyName {
         padding-bottom: 10px;
         font-size: 25px;
-        color: #51356E !important;
+        color: #000000 !important;
         font-family: "Montserrat", sans-serif;
     }
 
     .contactInfo {
         padding-top: 10px;
-        background-image: linear-gradient(to right, #7b6f82, #ddafdd 90%);
+        background-color: #878aa0 !important;
     }
 
     .contactButton {
         border: unset;
-        color: #DED3E6;
+        color: #c6cce3;
     }
 
     .contactButton:hover {
-        color: #51356E;
+        color: #000000;
     }
 
     .fontStyle {
         text-align: center;
-        color: #A190B2;
+        color: #c6cce3;
         margin-top: 30px;
         font-family: "Montserrat", sans-serif;
     }
@@ -77,7 +77,7 @@
 
     .fa:hover {
         opacity: 0.9;
-        color: #51356E;
+        color: #000000;
     }
 
     .fa-facebook {

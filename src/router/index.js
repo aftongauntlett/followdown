@@ -38,6 +38,12 @@ Vue.use(VueRouter)
       component: () => import('../views/CreateSession.vue')
     },
 
+    {
+      path: '/sessions/:sessionType',
+      name: 'Sessions List',
+      component: () => import('../views/SessionsList.vue')
+    },
+
 ]
 
 const router = new VueRouter({

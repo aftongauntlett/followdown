@@ -51,7 +51,8 @@
         },
         methods: {
             createSession(){
-                firebase.database().ref('/sessions').push({
+                firebase.database().ref('/sessions/play').push({
+                    owner: firebase.auth().currentUser.uid,
                     name: this.name,
                     desc: this.desc,
                     game: this.game,
