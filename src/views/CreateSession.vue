@@ -15,8 +15,8 @@
             <label class="pt-3" for="contact">Contact Information</label>
             <b-form-input v-model="contact" id="ContactInfo"></b-form-input>
 
-<!--            <label class="pt-3" for="country">Select Country</label>-->
-<!--            <country-select v-model="country" :country="country" topCountry="US" />-->
+            <label class="pt-3" for="country">Select Country</label>
+            <country-select v-model="country" :country="country" topCountry="US" />
 
             <label class="pt-3" for="datepicker">Choose a date</label>
             <b-form-datepicker id="datepicker" v-model="date" class="mb-2"></b-form-datepicker>
@@ -36,9 +36,6 @@
 
 <script>
     import firebase from "firebase"
-    // import vueCountryRegionSelect from 'vue-country-region-select'
-    // Vue.use(vueCountryRegionSelect)
-    // new Vue({}).$mount('#app')
 
     export default {
         name: "CreateSession",
