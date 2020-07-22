@@ -31,11 +31,10 @@
             <label class="pt-3" for="age">Age Range</label>
             <b-form-select v-model="age" :options="options" id="age"></b-form-select>
 
-        <b-button v-b-modal.modal-center type="submit" variant="dark" class="mt-5">Create</b-button>
+        <b-button type="submit" variant="dark" class="mt-5">Create</b-button>
         </b-form>
-
-        <b-modal class="modalText" id="modal-center" centered title="Complete">
-            <p class="my-4">Session Created</p>
+        <b-modal class="modalText" id="modal-center" centered title="" @ok="goToSession">
+            <p class="modalText my-4">Session Created</p>
         </b-modal>
 
     </div>
@@ -59,23 +58,23 @@
                 time: "",
                 options: [
                     {
-                        value: 0,
+                        value: "Everyone",
                         text: "Everyone"
                     },
                     {
-                        value: 0,
+                        value: "10+",
                         text: "10+"
                     },
                     {
-                        value: 1,
+                        value: "Teen",
                         text: "Teen"
                     },
                     {
-                        value: 2,
+                        value: "Mature 17+",
                         text: "Mature 17+"
                     },
                     {
-                        value: 3,
+                        value: "Adults Only 18+",
                         text: "Adults Only 18+"
                     },
                 ]
@@ -96,8 +95,11 @@
                     age: this.age,
                 }).then(response => {
                     // alert("Session Created");
-                    // this.$router.push({name: "Sessions"})
+                    this.$bvModal.show("modal-center")
                 })
+            },
+            goToSession() {
+                this.$router.push({name: "Sessions"})
             }
         },
     }
@@ -132,4 +134,11 @@
         line-height: 1.5;
         height: calc(1.5em + .75rem + 2px);
     }
+
+    .modalText {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+    }
+
 </style>

@@ -2,22 +2,27 @@
     <div class="container">
         <p class="pt-5 aboutHeader d-flex flex-wrap justify-content-center">Active Sessions</p>
         <b-row class="sessionTitles">
-            <b-col>Server Name</b-col>
+            <b-col class="d-none d-md-block">Server Name</b-col>
             <b-col>Game</b-col>
             <b-col>Date</b-col>
-            <b-col>Time</b-col>
-            <b-col>Age Range</b-col>
+            <b-col class="d-none d-md-block">Time</b-col>
+            <b-col class="d-none d-md-block">Age Range</b-col>
             <b-col></b-col>
         </b-row>
 
         <b-row v-for="(session, key, index) in sessions" :class="{alternate: index % 2}" >
-            <b-col>{{ session.name}}</b-col>
+            <b-col class="d-none d-md-block">{{ session.name}}</b-col>
             <b-col>{{ session.game}}</b-col>
-            <b-col>{{ session.date}}</b-col>
-            <b-col>{{ session.time }}</b-col>
-            <b-col>{{ session.age }}</b-col>
+            <b-col>{{ session.date | moment("MM-DD-YY")}}</b-col>
+            <b-col class="d-none d-md-block">{{ session.time }}</b-col>
+            <b-col class="d-none d-md-block">{{ session.age }}</b-col>
             <b-col>
                 <b-button @click="() => {removeSession(key)} " v-if="session.owner === owner">Delete</b-button>
+
+                <b-button v-b-modal.modal-center v-else variant="primary" >Join</b-button>
+                <b-modal class="modalText" id="modal-center" centered title="">
+                <p class="modalText my-4">Joined!</p>
+                </b-modal>
             </b-col>
         </b-row>
     </div>
@@ -42,6 +47,9 @@ import firebase from "firebase"
             firebase.database().ref(`sessions/${this.$route.params.sessionType}`).on("value", snapshot => {
                 this.sessions = snapshot.val()
             })
+            if(firebase.auth().currentUser){
+                this.owner = firebase.auth().currentUser.uid
+            }
             firebase.auth().onAuthStateChanged(user => {
                 this.owner = user.uid;
             })
@@ -77,10 +85,19 @@ import firebase from "firebase"
     }
 
     .container {
-        background-image: url("https://wallpaperplay.com/walls/full/d/7/e/191282.jpg");
         margin-top: 30px;
         margin-bottom: 30px;
         border-radius: 12px;
     }
+
+    .modalText {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+    }
+
+@media only screen and (min-width: 300px) {
+
+}
 
 </style>

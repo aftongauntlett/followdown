@@ -6,6 +6,7 @@
                    :text="info.text"
                     :dark="true"
                     class="m-md-3 mx-auto my-3"
+                    :on-click="() => {loginOrNavigate(info.name, info.params)}"
             >
             </RotateButtons>
         </div>
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+    import firebase from "firebase"
     import RotateButtons from "../Shared/RotateButtons";
     export default {
         name: "SessionIcons",
@@ -22,17 +24,33 @@
                 cardData: [
                     {
                         text: 'Create a Session',
+                        name: "Create Session"
                     },
                     {
                         text: 'Join a Session',
+                        name: "Sessions List",
+                        params: {sessionType: 'play'}
                     },
                     {
                         text: 'Host a Server',
+                        name: "Server"
                     },
                     {
                         text: 'Personalized Website',
+                        name: "Website"
                     },
                 ]
+            }
+        },
+        methods: {
+            loginOrNavigate(dest, params){
+                if (firebase.auth().currentUser) {
+                    this.$router.push({name: dest, params})
+                } else {
+                    this.$router.push({
+                        name: "Login"
+                    })
+                }
             }
         }
     }

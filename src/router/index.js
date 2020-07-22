@@ -5,59 +5,56 @@ import Login from "../views/Login";
 
 Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+const routes = [
     {
-      path: '/login',
-      name: 'Login',
-      component: Login
-    },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  },
-    {
-      path: '/profile',
-      name: 'Profile',
-      component: () => import('../views/Profile.vue')
+        path: '/',
+        name: 'Home',
+        component: Home
     },
     {
-      path: '/sessions',
-      name: 'Sessions',
-      component: () => import('../views/Sessions.vue')
-    },
-
-    {
-      path: '/sessions/new',
-      name: 'Create Session',
-      component: () => import('../views/CreateSession.vue')
-    },
-
-    {
-      path: '/sessions/:sessionType',
-      name: 'Sessions List',
-      component: () => import('../views/SessionsList.vue')
+        path: '/login',
+        name: 'Login',
+        component: Login
     },
     {
-      path: '/server',
-      name: 'Server',
-      component: () => import('../views/Server.vue')
+        path: '/about',
+        name: 'About',
+        component: () => import('../views/About.vue')
     },
     {
-      path: '/website',
-      name: 'Website',
-      component: () => import('../views/Website.vue')
+        path: '/profile',
+        name: 'Profile',
+        component: () => import('../views/Profile.vue')
     },
-
+    {
+        path: '/sessions',
+        name: 'Sessions',
+        component: () => import('../views/Sessions.vue')
+    },
+    {
+        path: '/sessions/new',
+        name: 'Create Session',
+        component: () => import('../views/CreateSession.vue')
+    },
+    {
+        path: '/sessions/:sessionType',
+        name: 'Sessions List',
+        component: () => import('../views/SessionsList.vue')
+    },
+    {
+        path: '/server',
+        name: 'Server',
+        component: () => import('../views/Server.vue')
+    },
+    {
+        path: '/website',
+        name: 'Website',
+        component: () => import('../views/Website.vue')
+    },
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
