@@ -8,6 +8,10 @@
 
 **Deployed:** https://followdown.com/
 
+**User Story:** [View Here](https://docs.google.com/document/d/1hMbLOU27C_KD8xwcpbXzYTKipcq50N4NTKckTQtFcWE/edit?usp=sharing)
+
+**AdobeXD Wireframe:** [View Here](https://xd.adobe.com/view/94be45cc-c08f-4299-bead-2dfcb0078d05-c1ed/)
+
 ## Description
 Website designed and built to allow gamers to schedule time to play together easily. Users are able to login, create a profile and then create and join gaming sessions. 
 
@@ -23,6 +27,10 @@ Website designed and built to allow gamers to schedule time to play together eas
 ## Screenshot:
 
 ![Front Page of portfolio](https://i.imgur.com/sdPeHdB.jpg)
+
+![Wireframe](https://i.imgur.com/BFyCcgX.jpg)
+
+
 
 ## License
 
