@@ -22,7 +22,6 @@ Website designed and built to allow gamers to schedule time to play together eas
 - JavaScript
 - Firebase
 - Adobe XD
-- Wireframes
 
 ## Screenshot:
 
@@ -36,7 +35,7 @@ Website designed and built to allow gamers to schedule time to play together eas
 
 MIT License
 
-Copyright(c) [2020][afton gauntlett]
+Copyright(c) [2020] [Follow|down Afton Gauntlett]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files(the "Software"), to deal
