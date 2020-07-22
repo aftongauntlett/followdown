@@ -11,19 +11,15 @@
         >
             <b-card-text>
                 Managing your server isn't always easy or possible. We can take out the
-                confusion and host them for you. We also provide full support, you never have to mess with it. Get started with hundreds of games and mods today.
-                <div class="mb-4 mt-4">
-                    24/7 Support
-                </div>
-                <div class="mb-4">
-                    Instant Activation
-                </div>
-                <div class="mb-5">
-                    Fast Pings and Low Prices
-                </div>
-            </b-card-text>
+                confusion and host them for you. We also provide full support, you never have to mess with it. Get started with hundreds of games and mods today. </b-card-text>
+                <ul>
+                    <li>24/7 Support</li>
+                    <li>Instant Activation</li>
+                    <li>Fast Pings</li>
+                    <li>Low Prices</li>
+                </ul>
+            <p>Contact us today to find out how to get started!</p>
 
-            <b-button href="#" variant="dark">Request</b-button>
         </b-card>
     </div>
 </template>
@@ -46,5 +42,13 @@
 
     img {
         margin-bottom: 30px !important;
+    }
+    li {
+        list-style-type: none;
+        padding: 10px;
+        font-weight: bold;
+    }
+    ul {
+        padding: unset !important;
     }
 </style>

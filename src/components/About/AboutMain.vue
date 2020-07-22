@@ -6,13 +6,22 @@
                 class="cardFont mt-2 contactBackground "
         >
             <b-card-text>
-                <div class="header">Server Hosting</div>
+                <div class="header pt-5">Sessions</div>
+
+                <p>
+                    Login and create gaming sessions for others to join. Choose a game and create a date and time to
+                    play it, other users can then sign up to join your session. Search through created sessions to join others. Always have someone to play with!</p>
+                <div class="d-flex justify-content-center">
+                    <RotateButtons :dark="true" :navTo="{ name: 'Login' }"
+                                   text="Join"></RotateButtons>
+                </div>
+                <div class="header pt-5">Server Hosting</div>
                 <p class="pb-2">
                     If you are looking to play a game but would like your own server, we can host it for you. If you
                     want special mods and customization, just let us know.
                 </p>
                 <div class="d-flex justify-content-center">
-                    <RotateButtons :dark="true" :navTo="{ name: 'Hosting' }"
+                    <RotateButtons :dark="true" :navTo="{ name: 'Server' }"
                                    text="Host"></RotateButtons>
                 </div>
                 <div class="header pt-5">Custom Website</div>
@@ -24,6 +33,7 @@
                                    text="Build"></RotateButtons>
                 </div>
             </b-card-text>
+            <ContactForm class="pt-5"/>
         </b-card>
 
     </div>
@@ -32,10 +42,11 @@
 
 <script>
     import RotateButtons from "../Shared/RotateButtons";
+    import ContactForm from "./ContactForm";
 
     export default {
         name: "AboutMain",
-        components: {RotateButtons}
+        components: {ContactForm, RotateButtons}
     }
 </script>
 

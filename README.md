@@ -22,7 +22,7 @@ Website designed and built to allow gamers to schedule time to play together eas
 
 ## Screenshot:
 
-![Front Page of portfolio](https://i.imgur.com/ebxyM7j.jpg)
+![Front Page of portfolio](https://i.imgur.com/sdPeHdB.jpg)
 
 ## License
 

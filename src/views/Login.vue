@@ -8,7 +8,7 @@
                     style="max-width: 20rem; max-height: 25rem"
                     class="cardFont mb-2 mt-2"
             >
-                <b-card-text>
+                <b-card-text class="pb-3">
                     You can both join and log in easily using your Google account.
                 </b-card-text>
                 <RotateButtons :dark="true" :on-click="loginWithFirebase" text="Login with Google"/>
@@ -48,11 +48,15 @@
     .aboutHeader {
         font-size: 45px;
         font-family: "Montserrat", sans-serif;
-        color:  #4e6b82;
-        border-bottom: 1px solid  #4e6b82;
+        color: #4e6b82;
+        border-bottom: 1px solid #4e6b82;
         margin: 0 auto;
         width: auto;
         margin-bottom: 30px;
+    }
+
+    img {
+        padding-bottom: 30px;
     }
 
 </style>

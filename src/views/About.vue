@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <div class="pt-5 aboutHeader d-flex flex-wrap justify-content-center">Offers</div>
-    <div class="about pt-5">
+    <div class="pt-5 aboutHeader d-flex flex-wrap justify-content-center">About Us</div>
+    <div class="about">
       <AboutMain />
     </div>
   </div>

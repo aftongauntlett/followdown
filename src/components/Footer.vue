@@ -37,7 +37,6 @@
         padding-bottom: 10px;
         color: #000000;
         font-family: "Montserrat", sans-serif;
-        font-weight: bold;
     }
 
     .companyName {

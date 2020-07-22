@@ -11,10 +11,18 @@
         >
             <b-card-text>
                 Let us design and build a custom website for your Guild or gaming group. Fully customizable to your specs.
-                If you do not have a design in mind, we can design it for you.
-            </b-card-text>
+                If you do not have a design in mind, we can design it for you.</b-card-text>
+               <p>
+                   Examples of sites we have built:
+               </p>
+                <ul>
+                    <li>Guilds</li>
+                    <li>D&D Groups</li>
+                    <li>Social Groups</li>
+                    <li>Private Servers</li>
+                </ul>
+            <p>Contact us today to find out how to get started!</p>
 
-            <b-button href="#" variant="dark">Request</b-button>
         </b-card>
     </div>
 </template>
@@ -37,5 +45,14 @@
 
     img {
         margin-bottom: 30px !important;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 10px;
+        font-weight: bold;
+    }
+    ul {
+        padding: unset !important;
     }
 </style>
