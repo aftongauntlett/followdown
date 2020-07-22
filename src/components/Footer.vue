@@ -16,7 +16,7 @@
             </div>
             <div class="footerFont">
                 &copy; Copyright 2020 |
-                <span style="color: white">FollowDown</span> | All Rights Reserved
+                <span style="color: white; font-weight: lighter">FollowDown</span> | All Rights Reserved
             </div>
         </div>
     </div>
@@ -37,6 +37,7 @@
         padding-bottom: 10px;
         color: #000000;
         font-family: "Montserrat", sans-serif;
+        font-weight: bold;
     }
 
     .companyName {
@@ -54,10 +55,7 @@
     .contactButton {
         border: unset;
         color: white;
-    }
 
-    .contactButton:hover {
-        color: #000000;
     }
 
     .fontStyle {

@@ -25,8 +25,8 @@
   .aboutHeader {
     font-size: 45px;
     font-family: "Montserrat", sans-serif;
-    color: #51356E;
-    border-bottom: 1px solid #DED3E6;
+    color: #323436;
+    border-bottom: 1px solid #363637;
     margin: 0 auto;
     width: auto;
   }

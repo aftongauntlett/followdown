@@ -1,7 +1,7 @@
 <template>
     <div class="container d-flex justify-content-center">
         <b-form @submit.prevent @submit="createSession" class="pt-5 pb-5 w-50">
-            <div class="aboutHeader pb-5">Create a Session</div>
+            <div class="aboutHeader mb-5">Create a Session</div>
 
             <label for="nameInput">Session Name</label>
             <b-form-input v-model="name" id="nameInput"></b-form-input>
@@ -16,7 +16,10 @@
             <b-form-input v-model="contact" id="ContactInfo"></b-form-input>
 
             <label class="pt-3" for="country">Select Country</label>
-            <country-select v-model="country" :country="country" topCountry="US" />
+            <div>
+                <country-select class="country" v-model="country" :country="country" topCountry="US" />
+
+            </div>
 
             <label class="pt-3" for="datepicker">Choose a date</label>
             <b-form-datepicker id="datepicker" v-model="date" class="mb-2"></b-form-datepicker>
@@ -99,13 +102,27 @@
     .aboutHeader {
         font-size: 45px;
         font-family: "Montserrat", sans-serif;
-        color: #000000;
-        /*border-bottom: 1px solid #7b6f82;*/
+        color: #323436;
+        border-bottom: 1px solid #363637;
         margin: 0 auto;
         width: auto;
+
     }
 
     .container {
         font-family: "Montserrat", sans-serif;
+    }
+
+    .country {
+        color: #6c757d !important;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-color: #6c757d !important;
+        border-radius: .25rem;
+        border: 1px solid #ced4da !important;
+        width: 100%;
+        line-height: 1.5;
+        height: calc(1.5em + .75rem + 2px);
     }
 </style>

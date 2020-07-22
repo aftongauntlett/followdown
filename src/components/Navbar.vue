@@ -57,7 +57,7 @@
     }
 
     .nav-link {
-        color: black !important;
+        color: #bfc5dd !important;
     }
 
     .nav-link:hover {

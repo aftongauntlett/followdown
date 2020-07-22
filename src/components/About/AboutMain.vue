@@ -59,7 +59,7 @@
 
     .header {
         font-size: 30px;
-        color: #51356E;
+        color: #151515;
         margin-bottom: .75rem;
     }
 
