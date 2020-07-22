@@ -36,7 +36,7 @@
                         name: "Server"
                     },
                     {
-                        text: 'Personalized Website',
+                        text: 'Website',
                         name: "Website"
                     },
                 ]

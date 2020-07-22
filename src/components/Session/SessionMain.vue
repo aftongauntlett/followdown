@@ -43,7 +43,7 @@
 
         </b-col>
         <b-col cols="12" lg="6">
-            <b-card title="Personalized Website" class="cols-2 w-lg-50 px-2 pt-lg-5"
+            <b-card title="Website" class="cols-2 w-lg-50 px-2 pt-lg-5"
                     img-src="https://toledolibrary.s3.amazonaws.com/uploads/images/blog/_large/Computer-Coding-Laptop.jpg"
                     img-alt="laptop with coding on screen" img-top>
                 <b-card-text>
