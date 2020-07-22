@@ -2,15 +2,16 @@
     <div class="d-flex flex-wrap justify-content-around pt-5 py-5">
         <b-card
                 title="Personal Website"
-                img-src="https://picsum.photos/600/300/?image=25"
-                img-alt="Image"
+                img-src="https://toledolibrary.s3.amazonaws.com/uploads/images/blog/_large/Computer-Coding-Laptop.jpg"
+                img-alt="laptop with coding on screen"
                 img-top
                 tag="article"
-                style="max-width: 20rem;"
+                style="max-width: 40rem;"
                 class="mb-2"
         >
             <b-card-text>
-                Request a Custom Built Website. Fully customizable to your specs. If you do not have a design in mind, we can design it for you.
+                Let us design and build a custom website for your Guild or gaming group. Fully customizable to your specs.
+                If you do not have a design in mind, we can design it for you.
             </b-card-text>
 
             <b-button href="#" variant="dark">Request</b-button>
@@ -29,5 +30,12 @@
 </script>
 
 <style scoped>
+    .card {
+        border: unset !important;
+        font-family: "Montserrat", sans-serif;
+    }
 
+    img {
+        margin-bottom: 30px !important;
+    }
 </style>

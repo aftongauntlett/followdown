@@ -3,7 +3,7 @@
         <b-col cols="12" lg="6">
             <b-card title="Create" class="cols-2 w-lg-50 px-2 pt-lg-5"
                     img-src="https://cdn.shopify.com/s/files/1/0219/0638/files/20191112_Integration_Razer_01.jpg?v=1573790671"
-                    img-alt="gaming setup" img-top>
+                    img-alt="desktop gaming set up with overwatch on screen" img-top>
                 <b-card-text>
                     Create a Gaming Session.
                     <div>
@@ -15,14 +15,14 @@
         </b-col>
         <b-col cols="12" lg="6">
             <b-card title="Join" class="cols-2 w-lg-50 px-2 pt-lg-5"
-                    img-src="https://www.gamespew.com/wp-content/uploads/2019/02/multiplayer.jpg" img-alt="Image"
+                    img-src="https://www.gamespew.com/wp-content/uploads/2019/02/multiplayer.jpg" img-alt="4 people holding nintendo switches"
                     img-top>
                 <b-card-text>
                     Sign up to join a Gaming Session.
                     <div>
                         <b-button class="mt-3" variant="outline-dark"
                                   :to="{name: 'Sessions List', params: {sessionType: 'play'}}" v-if="playSessions">
-                            {{ Object.keys(playSessions).length }} sessions planned.
+                            {{ Object.keys(playSessions).length }} Sessions Planned
                         </b-button>
                     </div>
                 </b-card-text>
@@ -32,11 +32,11 @@
         <b-col cols="12" lg="6">
             <b-card title="Host a Server" class="cols-2 w-lg-50 px-2 pt-lg-5"
                     img-src="https://techacute.com/wp-content/uploads/2014/12/led-server-lights-data-centre-blue-aisle_edited.jpg"
-                    img-alt="Image" img-top>
+                    img-alt="server racks" img-top>
                 <b-card-text>
                     Let us host a private server for you and your friends.
                     <div class="d-flex justify-content-center flex-wrap pt-3">
-                        <b-button variant="outline-dark" :navTo="{ name: 'Server' }">Host</b-button>
+                        <b-button variant="outline-dark" :to="{ name: 'Server' }">Host</b-button>
                     </div>
                 </b-card-text>
             </b-card>
@@ -45,11 +45,11 @@
         <b-col cols="12" lg="6">
             <b-card title="Personalized Website" class="cols-2 w-lg-50 px-2 pt-lg-5"
                     img-src="https://toledolibrary.s3.amazonaws.com/uploads/images/blog/_large/Computer-Coding-Laptop.jpg"
-                    img-alt="Image" img-top>
+                    img-alt="laptop with coding on screen" img-top>
                 <b-card-text>
                     Let us design a custom website for your Guild or Gaming Group.
                     <div class="d-flex justify-content-center flex-wrap pt-3">
-                        <b-button variant="outline-dark" :navTo="{ name: 'Website' }">Website</b-button>
+                        <b-button variant="outline-dark" :to="{ name: 'Website' }">Website</b-button>
                     </div>
                 </b-card-text>
             </b-card>
