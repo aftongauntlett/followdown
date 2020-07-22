@@ -4,7 +4,7 @@
             <div class="aboutHeader mb-5">Create a Session</div>
 
             <label for="nameInput">Session Name</label>
-            <b-form-input v-model="name" id="nameInput"></b-form-input>
+            <b-form-input required v-model="name" id="nameInput"></b-form-input>
 
             <label class="pt-3" for="descriptionInput">Session Description</label>
             <b-form-textarea v-model="desc" id="descriptionInput" rows="8"></b-form-textarea>
@@ -25,14 +25,18 @@
             <b-form-datepicker id="datepicker" v-model="date" class="mb-2"></b-form-datepicker>
 
             <label class="pt-3" for="timepicker">Choose a time</label>
-            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
+            <b-form-timepicker v-model="time" locale="en"></b-form-timepicker>
             <div class="mt-2"></div>
 
             <label class="pt-3" for="age">Age Range</label>
             <b-form-select v-model="age" :options="options" id="age"></b-form-select>
 
-            <b-button type="submit" variant="dark" class="mt-5">Create</b-button>
+        <b-button v-b-modal.modal-center type="submit" variant="dark" class="mt-5">Create</b-button>
         </b-form>
+
+        <b-modal class="modalText" id="modal-center" centered title="Complete">
+            <p class="my-4">Session Created</p>
+        </b-modal>
 
     </div>
 </template>
@@ -52,6 +56,7 @@
                 date: "",
                 value: "",
                 age: "",
+                time: "",
                 options: [
                     {
                         value: 0,
@@ -85,14 +90,16 @@
                     desc: this.desc,
                     game: this.game,
                     date: this.date,
+                    country: this.country,
+                    time: this.time,
                     contact: this.contact,
                     age: this.age,
                 }).then(response => {
-                    alert("Session Created");
-                    this.$router.push({name: "Sessions"})
+                    // alert("Session Created");
+                    // this.$router.push({name: "Sessions"})
                 })
             }
-        }
+        },
     }
 
 
@@ -102,10 +109,10 @@
     .aboutHeader {
         font-size: 45px;
         font-family: "Montserrat", sans-serif;
-        color: #323436;
-        border-bottom: 1px solid #363637;
-        margin: 0 auto;
+        color:  #4e6b82;
+        border-bottom: 1px solid  #4e6b82;
         width: auto;
+        margin-bottom: 30px;
 
     }
 
