@@ -29,8 +29,10 @@
 </template>
 
 <script>
+    import RotateButtons from "../Shared/RotateButtons";
     export default {
         name: "Icons",
+        components: {RotateButtons},
         methods: {
             toggleMenu(){
                 this.showMenu=!this.showMenu

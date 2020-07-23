@@ -4,7 +4,6 @@
         <EditProfile class="userInfo" @finished="edit = !edit" :profile="profile" v-if="edit" />
         <ProfileData class="userInfo" :profile="profile" v-else-if="profile" />
         <b-button @click="edit = !edit" v-if="!edit" class="userInfo mb-4 mt-4" variant="outline-dark">Edit your profile</b-button>
-
     </div>
 </template>
 
@@ -14,10 +13,11 @@
     import EditProfile from "./EditProfile";
     import ProfileData from "./ProfileData";
     import RotateButtons from "../Shared/RotateButtons";
+    import RotateButtons from "../Shared/RotateButtons";
 
     export default {
         name: "ProfileCard",
-        components: {ProfileData, EditProfile, UserInfo},
+        components: {RotateButtons, ProfileData, EditProfile, UserInfo},
         data () {
             return {
                 user: {},

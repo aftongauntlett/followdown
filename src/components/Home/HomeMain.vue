@@ -21,10 +21,11 @@
     import FollowDown from "../Shared/FollowDown";
     import Icons from "./Icons";
     import SessionIcons from "./SessionIcons";
+    import RotateButtons from "../Shared/RotateButtons";
 
     export default {
         name: "HomeMain",
-        components: {SessionIcons, Icons, FollowDown, HomeButton},
+        components: {RotateButtons, SessionIcons, Icons, FollowDown, HomeButton},
     }
 </script>
 
